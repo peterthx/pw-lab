@@ -17,6 +17,6 @@ export class LogoutPage extends BasePage{
   public async logout() {
     await this.lnkBurgerMenu.click();
     await this.btnSidebarLink.click();
-    await expect(this.page).toHaveURL("https://www.saucedemo.com/");
+    await expect(this.page).toHaveURL('/');
   }
 }

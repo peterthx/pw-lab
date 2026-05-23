@@ -1,5 +1,4 @@
 import { Page } from "@playwright/test";
-import { dev } from "../.env/baseURL";
 
 export class BasePage {
   readonly page: Page;
@@ -9,7 +8,7 @@ export class BasePage {
   }
 
   async navigateTo() {
-    await this.page.goto(dev.URL);
+    await this.page.goto('/');
   }
 
   async wait(ms: number) {

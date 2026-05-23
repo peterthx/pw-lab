@@ -24,7 +24,7 @@ test.describe("Login Tests", () => {
     await expect(page).toHaveURL(/inventory.html/);
 
     await logoutPage.logout();
-    await expect(page).toHaveURL(/www.saucedemo.com/)
+    await expect(page).toHaveURL("/")
   });
 
   test("should show error for invalid credentials", async ({
