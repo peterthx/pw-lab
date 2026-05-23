@@ -2,7 +2,7 @@ import { Locator, Page, expect } from "@playwright/test";
 import { BasePage } from "./BasePage";
 
 export class LoginPage extends BasePage {
-  constructor( page: Page) {
+  constructor(page: Page) {
     super(page);
   }
 
@@ -18,17 +18,17 @@ export class LoginPage extends BasePage {
     return this.page.locator("#login-button");
   }
 
-  async login(username: string, password: string) {
+  get errMessage() {
+    return this.page.locator('[data-test="error"]');
+  }
+
+  public async login(username: string, password: string) {
     await this.usernameInput.fill(username);
     await this.passwordInput.fill(password);
     await this.loginButton.click();
   }
 
-  get errMessage() {
-    return this.page.locator('[data-test="error"]');
-  }
-
-  async assertErrorMessage() {
+  public async assertErrorMessage() {
     await expect(this.errMessage).toHaveText(
       "Epic sadface: Sorry, this user has been locked out.",
     );
