@@ -25,9 +25,6 @@ export const test = base.extend<MyFixtures>({
   standardUser: async ({}, use) => {
     await use(usersData.standardUser);
   },
-  lockedoutUser: async ({}, use) => {
-    await use(usersData.lockedoutUser);
-  },
 });
 
 export { expect } from "@playwright/test";
