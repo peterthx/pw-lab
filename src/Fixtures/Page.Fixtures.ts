@@ -22,8 +22,11 @@ export const test = base.extend<MyFixtures>({
   logoutPage: async ({ page }, use) => {
     await use(new LogoutPage(page));
   },
-  standardUser: async ({}, use) => {
+  standardUser: async ({ }, use) => {
     await use(usersData.standardUser);
+  },
+  lockedoutUser: async ({ }, use) => {
+    await use(usersData.lockedoutUser);
   },
 });
 
