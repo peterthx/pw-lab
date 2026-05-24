@@ -19,7 +19,7 @@
     "paths": {
       "@data/*": ["src/data/*"],
       "@pages/*": ["src/pages/*"],
-      "@fixtures/*": ["src/Fixtures/*"],
+      "@fixtures/*": ["src/fixtures/*"],
       "@utils/*": ["src/utils/*"],
       "@env/*": ["src/.env/*"]
     }
