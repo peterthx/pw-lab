@@ -1,5 +1,6 @@
 import { test as base } from "@playwright/test";
 import { usersData } from "@data/users";
+import { addressInput } from "@data/users";
 import { LoginPage } from "@pages/LoginPage";
 import { InventoryPage } from "@pages/InventoryPage";
 import { LogoutPage } from "@pages/LogoutPage";
@@ -14,6 +15,7 @@ type MyFixtures = {
   checkoutPage: CheckoutPage;
   standardUser: typeof usersData.standardUser;
   lockedoutUser: typeof usersData.lockedoutUser;
+  addressInput: typeof addressInput.addrone;
 };
 
 export const test = base.extend<MyFixtures>({
@@ -44,6 +46,9 @@ export const test = base.extend<MyFixtures>({
   lockedoutUser: async ({}, use) => {
     await use(usersData.lockedoutUser);
   },
+  addressInput : async({},use)=>{
+    await use (addressInput.addrone)
+  }
   
 });
 
