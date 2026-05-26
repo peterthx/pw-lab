@@ -11,7 +11,7 @@ export class CartPage extends BasePage {
     await expect(this.page).toHaveURL(/cart.html/);
   }
 
-  async chkItem(): Promise<boolean> {
+  async checkItem(): Promise<boolean> {
     const quantity = await this.page
       .locator('[data-test="item-quantity"]')
       .textContent();
@@ -26,7 +26,7 @@ export class CartPage extends BasePage {
     return this.page.locator('[data-test="shopping-cart-link"]');
   }
 
-  async chkout(): Promise<void>{
+  async checkout(): Promise<void>{
      return this.page.locator('[data-test="checkout"]').click();
   }
 }

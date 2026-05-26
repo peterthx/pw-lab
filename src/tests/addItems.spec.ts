@@ -14,8 +14,8 @@ test.describe("Added Item to Cart", async () => {
   }) => {
     await inventoryPage.btnAddBackpack.click();
     await cartPage.clkCartBadge();
-    expect(await cartPage.chkItem()).toBeTruthy();
-    await cartPage.chkout();
+    expect(await cartPage.checkItem()).toBeTruthy();
+    await cartPage.checkout();
     await checkoutPage.inputAddress(
       addressInput.firstname,
       addressInput.lastname,

@@ -21,7 +21,7 @@ export class InventoryPage extends BasePage {
     return this.page.locator('[data-test="add-to-cart-sauce-labs-onesie"]');
   }
 
-  get btnAddBikeLigh(): Locator {
+  get btnAddBikeLight(): Locator {
     return this.page.locator('[data-test="add-to-cart-sauce-labs-bike-light"]');
   }
 
